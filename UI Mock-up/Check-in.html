@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Field-App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="Check-in.html">Check-in</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Check-out.html">Check-out</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+    <form class="container-fluid">
+        <h1>Store Information</h1>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <label for="storeNumber">Store Number</label>
+                <input type="text" class="form-control" id="storeNumber">
+            </div>
+            <div class="col-md-4">
+                <label for="installer">Installer</label>
+                <input type="text" class="form-control" id="installer">
+            </div>
+            <div class="col-md-4">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" class="form-control">
+                </div>
+        
+                <div class="col-md-3">
+                    <label for="weekdayHours">Hours - Mon-Sat</label>
+                    <input type="text" class="form-control" id="weekdayHours">
+                </div>
+        
+                <div class="col-md-3">
+                    <label for="weekdendHours">Hours - Sun</label>
+                    <input type="text" class="form-control" id="weekendHours">
+                </div>
+            </div>
+    
+        </div>
+    
+    
+        <h1>Store Address</h1>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+    
+            <div class="col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+    
+            <div class="col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+        </div>
+    
+        <h1>Name Me Please</h1>
+    
+        <div class="row">
+            <div class="col-md-3">
+                <label for="changes">Changes requested by</label>
+                <input type="text" class="form-control" id="changes">
+            </div>
+            <div class="col-md-3">
+                <label for="portNumber">Jack/Port # if different from 13</label>
+                <input type="number" class="form-control" id="portNumber">
+            </div>
+            <div class="col-md-3">
+                <label for="controllerUpTime">Controller Communicating by</label>
+                <input type="time" class="form-control" id="controllerUpTime">
+            </div>
+            <div class="col-md-3">
+                <label for="commissionTime">Ready for commission by</label>
+                <input type="time" class="form-control" id="commissionTime">
+            </div>
+        </div>
+    
+        <h1>Breaker/Lighting Info</h1>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <label for="esciBreaker">eSCI Panel/Breaker</label>
+                <input type="text" class="form-control" id="esciBreaker">
+            </div>
+            <div class="col-md-4">
+                <label for="powerMeter">Power Meter Panel/Breaker</label>
+                <input type="text" class="form-control" id="powerMeter">
+            </div>
+            <div class="col-md-4">
+                <label for="phaseLoss">Phase Loss ref. Breakers</label>
+                <input type="text" class="form-control" id="phaseLoss">
+            </div>
+        </div>
+    
+    <!-- Daylight harvesting should be a checkbox with a hidden field -->
+    
+        <div class="row">
+            <div class="col-md-12">
+                <label for="lightingNotes">Pre-existing Lighting Notes</label> <br>
+                <textarea name="lightingNotes" id="lightingNotes" rows="3" class="form-control"></textarea>
+            </div>
+        </div>
+    
+    
+        <h1>HVAC Info</h1>
+    
+        <div class="row">
+            <div class="col-md-4">
+                <label for="numberOfUnits">Total HVAC Units</label>
+                <input type="number" class="form-control" id="numberOfUnits">
+            </div>
+            <div class="col-md-4">
+                <label for="heatPump">Which Units are HP if Any</label>
+                <input type="text" class="form-control" id="heatPump">
+            </div>
+            <div class="col-md-4">
+                <label for="activeHeatCool">Active Heat/Cool</label>
+                <input type="text" class="form-control" id="activeHeatCool">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <label for="hvacNotes">Pre-existing Issues</label>
+                <textarea name="hvacNotes" id="HVACNotes" rows="3" class="form-control"></textarea>
+            </div>
+        </div>
+    
+        <h1>Additional Store Information</h1>
+    
+        <div class="row">
+            <div class="col-md-12">
+                <label for="storeNotes">Additional Store Notess</label>
+                <textarea name="storeNotes" id="storeNotes" rows="3" class="form-control"></textarea>
+            </div>
+        </div>
+    
+        <h1>Picture you can draw on? IDFK</h1>
+    </form>
+  </body>
+</html>
